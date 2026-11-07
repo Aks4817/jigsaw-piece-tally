@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Jigsaw Explorer Piece Tally",
+  "version": "0.2.0",
+  "description": "Counts how many piece edges each player connects in a Jigsaw Explorer multiplayer game.",
+  "minimum_chrome_version": "111",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.jigsawexplorer.com/*",
+        "https://jigsawexplorer.com/*"
+      ],
+      "js": ["src/tally.js", "src/hooks.js", "src/overlay.js", "src/main.js"],
+      "run_at": "document_idle",
+      "world": "MAIN"
+    }
+  ]
+}
